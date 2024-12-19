@@ -1,161 +1,26 @@
 using System;
-using System.Drawing;
 
-namespace first
+namespace second
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            // Console.WriteLine("Hello World!");
-
-            //first Q
-
-            /*Console.WriteLine("Enter The Number:");
-            int Num = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("The Number is: " + Num);*/
-
-            //second Q
-            // Declare and initialize two integer variables
-            /*int x = 10;
-            int y = 5;
-
-            // Display the initial values
-            Console.WriteLine($"Before Assigning:\nx = {x}, y = {y}");
-
-            // Assign the value of x to y
-            y = x;
-
-            // Display the values after assignment
-            Console.WriteLine($"After Assigning:\nx = {x}, y = {y}");
-
-            // Modify the value of x
-            x = 20;
-
-            // Display the values after modifying x
-            Console.WriteLine($"After Modifying x:\nx = {x}, y = {y}");*/
-
-
-            //Third Q
-            /*
-            Point p1 = new Point { X = 1, Y = 1 };
-            Point p2 = new Point { X = 2, Y = 2 };
-
-            // Assigning reference of p2 to p1
-            p1 = p2;
-
-            // Modifying p2
-            p2.X = 5;
-            p2.Y = 10;
-
-            Console.WriteLine("Point p1: X = " + p1.X + ", Y = " + p1.Y);
-            Console.WriteLine("Point p2: X = " + p2.X + ", Y = " + p2.Y);
-            */
-
             #region 1
-
-            /* Console.Write("Enter a number: ");
-             int number;
-
-             // Check if the input is a valid integer
-             if (int.TryParse(Console.ReadLine(), out number))
-             {
-                 // Check if the number is divisible by both 3 and 4
-                 if (number % 3 == 0 && number % 4 == 0)
-                 {
-                     Console.WriteLine("yes");
-                 }
-                 else
-                 {
-                     Console.WriteLine("no");
-                 }
-             }
-             else
-             {
-                 Console.WriteLine("Invalid input. Please enter a valid integer.");
-             }*/
-            #endregion
-            //////////////////////////////////////
-            #region 2
-
-            /* Console.Write("Please enter an integer: ");
-             int number1 = Convert.ToInt32(Console.ReadLine());
-
-             if (number1 < 0)
-             {
-                 Console.WriteLine("negative");
-             }
-             else
-             {
-                 Console.WriteLine("positive");
-             }
-            */
-            #endregion
-
-            #region 3
-            /*
-            // Prompt the user to enter three integers
-            Console.WriteLine("Enter the first number:");
-            int num1 = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Enter the second number:");
-            int num2 = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Enter the third number:");
-            int num3 = int.Parse(Console.ReadLine());
-
-            // Find the maximum and minimum values
-            int max = Math.Max(num1, Math.Max(num2, num3));
-            int min = Math.Min(num1, Math.Min(num2, num3));
-
-            // Print the results
-            Console.WriteLine("The maximum number is: " + max);
-            Console.WriteLine("The minimum number is: " + min);
-
-            */
-            #endregion
-
-            #region 4
             /*
             Console.Write("Enter an integer: ");
             int number = int.Parse(Console.ReadLine());
 
-            if (number % 2 == 0)
+            Console.WriteLine("Numbers from 1 to " + number + ":");
+            for (int i = 1; i <= number; i++)
             {
-                Console.WriteLine($"{number} is an even number.");
-            }
-            else
-            {
-                Console.WriteLine($"{number} is an odd number.");
+                Console.WriteLine(i);
             }
             */
             #endregion
 
-            #region 5
-            /*
-            Console.Write("Enter a character: ");
-            char ch = Char.ToLower(Console.ReadKey().KeyChar);
-            Console.WriteLine(); // For new line after input
+            #region 2
 
-            if (!Char.IsLetter(ch))
-            {
-                Console.WriteLine("Please enter a valid alphabet.");
-            }
-            else
-            {
-                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
-                {
-                    Console.WriteLine($"{ch} is a vowel.");
-                }
-                else
-                {
-                    Console.WriteLine($"{ch} is a consonant.");
-                }
-            }
-            */
-            #endregion
-
-            #region 7
             /*
             Console.Write("Enter an integer: ");
             int number = int.Parse(Console.ReadLine());
@@ -163,15 +28,15 @@ namespace first
             Console.WriteLine($"Multiplication table for {number}:");
             for (int i = 1; i <= 12; i++)
             {
-                Console.WriteLine($"{number * i}"+ " ");
+                Console.WriteLine($"{number * i}");
             }
             */
             #endregion
 
-            #region 8
+            #region 3
             /*
             Console.Write("Enter a number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
+            int number = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Even numbers between 1 and " + number + " are:");
             for (int i = 1; i <= number; i++)
@@ -184,71 +49,181 @@ namespace first
             */
             #endregion
 
-            #region 9
+            #region 4
             /*
+            // Prompt the user to enter the base number
             Console.Write("Enter the base number: ");
             int baseNumber = Convert.ToInt32(Console.ReadLine());
 
+            // Prompt the user to enter the exponent
             Console.Write("Enter the exponent: ");
             int exponent = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine($"Power series of {baseNumber} to the power of {exponent}:");
-            for (int i = 0; i <= exponent; i++)
-            {
-                Console.WriteLine($"{Math.Pow(baseNumber, i)}");
-            }
+            // Calculate the power
+            double result = Math.Pow(baseNumber, exponent);
+
+            // Print the result
+            Console.WriteLine($"{baseNumber} raised to the power of {exponent} is {result}");
+
             */
             #endregion
 
-            #region 11
+            #region 5
+            /*
+            // Declare an array to store the marks of five subjects
+            int[] marks = new int[5];
+            int total = 0;
+            double average, percentage;
+
+            // Prompt the user to enter the marks for each subject
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Enter marks for subject {0}: ", i + 1);
+                marks[i] = int.Parse(Console.ReadLine());
+                total += marks[i];
+            }
+
+            // Calculate average and percentage
+            average = total / 5.0;
+            percentage = (total / 500.0) * 100;
+
+            // Display the results
+            Console.WriteLine("Total Marks: " + total);
+            Console.WriteLine("Average Marks: " + average);
+            Console.WriteLine("Percentage: " + percentage + "%");
+            */
+            #endregion
+
+            #region 6
             /*
             Console.Write("Enter the month number (1-12): ");
             int month = Convert.ToInt32(Console.ReadLine());
 
             int days = DateTime.DaysInMonth(DateTime.Now.Year, month);
 
-            Console.WriteLine($"The number of days in month {month} is: {days}");
+            Console.WriteLine($"Number of days in month {month}: {days}");
             */
             #endregion
 
-            #region 18
+            #region 7
+            /*
+            Console.WriteLine("Enter the first number:");
+            double num1 = Convert.ToDouble(Console.ReadLine());
 
-            //effiency level
+            Console.WriteLine("Enter the second number:");
+            double num2 = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Enter the working hours: ");
-            int hour = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the operation (+, -, *, /):");
+            char operation = Console.ReadLine()[0];
 
-            if (2 <= hour && hour < 3)
+            double result = 0;
+
+            switch (operation)
             {
-                Console.Write("highly efficient");
-            }
-            if (3 <= hour && hour < 4)
-            {
-                Console.Write("increase their speed.");
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 != 0)
+                    {
+                        result = num1 / num2;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Cannot divide by zero.");
+                        return;
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Invalid operation.");
+                    return;
             }
 
-            if (4 <= hour && hour <= 5)
-            {
-                Console.Write("should take training.");
-            }
-            if (hour > 5)
-            {
-                Console.Write("leave the company.");
-            }
+            Console.WriteLine($"The result is: {result}");
 
-
+            */
             #endregion
+
+            #region 8
+            /*
+            Console.Write("Enter an integer: ");
+            int number = int.Parse(Console.ReadLine());
+            int reversedNumber = 0;
+
+            while (number != 0)
+            {
+                int remainder = number % 10;
+                reversedNumber = (reversedNumber * 10) + remainder;
+                number /= 10;
+            }
+
+            Console.WriteLine($"Reversed number: {reversedNumber}");
+            */
+            #endregion
+
+            #region 9
+            /*
+            Console.Write("Enter the starting number of the range: ");
+            int start = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the ending number of the range: ");
+            int end = Convert.ToInt32(Console.ReadLine());
+
+            FindPrimesInRange(start, end);
+            */
+            #endregion
+
+            #region 10
+
+            Console.Write("Enter a decimal number: ");
+            int decimalNumber = int.Parse(Console.ReadLine());
+            int binaryNumber = 0;
+            int place = 1;
+
+            while (decimalNumber > 0)
+            {
+                int remainder = decimalNumber % 2;
+                binaryNumber += remainder * place;
+                decimalNumber /= 2;
+                place *= 10;
+            }
+
+            Console.WriteLine("Binary representation: " + binaryNumber);
+            #endregion
+
 
 
 
         }
         /*
-        class Point
+        static bool IsPrime(int number)
         {
-            public int X { get; set; }
-            public int Y { get; set; }
+            if (number <= 1) return false;
+            for (int i = 2; i * i <= number; i++)
+            {
+                if (number % i == 0) return false;
+            }
+            return true;
         }
 
+        static void FindPrimesInRange(int start, int end)
+        {
+            Console.WriteLine($"Prime numbers between {start} and {end} are:");
+            for (int i = start; i <= end; i++)
+            {
+                if (IsPrime(i))
+                {
+                    Console.Write(i + " ");
+                }
+            }
+            Console.WriteLine();
+        }
         */
     }
 }
+
